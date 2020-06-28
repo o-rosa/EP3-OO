@@ -1,5 +1,5 @@
 
-public class FormatoCor extends FormatoDecorador {
+public class FormatoCor extends FormatoDecorator {
 	private String cor;
 	public FormatoCor(String cor, Formato f) {
 		super(f);

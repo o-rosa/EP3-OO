@@ -3,13 +3,13 @@ import java.io.IOException;
 
 public class GeradorDeRelatorios {	
 	private Produto [] produtos;
-	private Algoritimo algoritmo;
+	private Algoritmo algoritmo;
 	private Criterio criterio;
 	private Formato format_flags;
 	private Filtro filtro;
 	private Object argFiltro;
 
-	public GeradorDeRelatorios(Produto [] produtos, Algoritimo algoritmo, Criterio criterio, Formato format_flags, Filtro filtro, Object argFiltro){
+	public GeradorDeRelatorios(Produto [] produtos, Algoritmo algoritmo, Criterio criterio, Formato format_flags, Filtro filtro, Object argFiltro){
 		this.produtos = new Produto[produtos.length];
 		for(int i = 0; i < produtos.length; i++)
 			this.produtos[i] = produtos[i];

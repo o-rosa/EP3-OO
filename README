@@ -1,0 +1,14 @@
+Otavio Nunes Rosa 11319037
+Fernanda Cavalcate
+Raul
+
+========= EXECUCAO E COMPILACAO =========
+
+Entre na pasta 'src' e abra o terminal
+COMPILACAO DAS CLASSES
+
+$ javac Principal.java
+
+EXECUCAO DO PROGRAMA
+
+$ java Principal

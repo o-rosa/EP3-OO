@@ -1,0 +1,19 @@
+RELATÓRIO BEM SUCINTO
+
+As classes Produto e ProdutoPadrao nao foram alteradas.
+
+
+Mudanças feitas na classe GeradorDeRelatorio para aplicar o padrão de projeto Strategy:
++ Algoritmo de ordenação: Interface Algoritmo e as classes que implementam Algoritmo (AlgInsertionSort e AlgQuickSort);
++ Critério de ordenação: Interface Criterio e as classes que implementam Criterio (CritDesCresc, [outra classes]);
++ Critério de filtragem: Interface Filtro e as classes que implementam Filtro (FiltroCategoriaIgualA, FiltroDescricaoSubstring, FiltroEstoqueMenorOuIgualA, FiltroIntervaloPreco, FiltroTodos);
+
+
+Mudanças feitas na classe GeradorDeRelatorio para aplicar o padrão de projeto Decorator:
++ Opções de formatação: Interface Formato, as classes que implementam Formato (FormatoDecorator e FormatoTexto), e as classes que herdam FormatoDecorator (FormatoCor, FormatoNegrito e FormatoItalico);
+
+
+Mudanças feitas na classe GeradorDeRelatorio por questão de organização:
++ Método main: Foi para a classe Principal;
++ Método carregaProdutos: Foi para a classe Principal;
+

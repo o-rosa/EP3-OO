@@ -1,6 +1,6 @@
 import java.io.PrintWriter;
 
-public abstract class FormatoDecorador implements Formato {
+public abstract class FormatoDecorator implements Formato {
 	private Formato f;
 	
 	@Override
@@ -12,7 +12,7 @@ public abstract class FormatoDecorador implements Formato {
 	public String fechaFormato() {
 		return f.fechaFormato();
 	}
-	public FormatoDecorador(Formato f) {
+	public FormatoDecorator(Formato f) {
 		this.f = f;
 	}
 

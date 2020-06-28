@@ -12,7 +12,7 @@ public class Principal {
 	 * 
 	 */
 	
-	public static final Algoritimo ALGORITIMO = new AlgInsertionSort();
+	public static final Algoritmo ALGORITMO = new AlgInsertionSort();
 	public static final Criterio CRITERIO = new CritDescCresc();
 	public static final Formato FORMATO  = new FormatoNegrito(new FormatoCor("#7e53c6", new FormatoItalico(new  FormatoTexto())));
 	public static final Filtro FILTRO = new FiltroIntervaloPreco();
@@ -27,7 +27,7 @@ public class Principal {
 		intervaloPreco.add(100.0);//minimo
 		intervaloPreco.add(500.0);//maximo
 		
-		gdr = new GeradorDeRelatorios(produtos, ALGORITIMO, CRITERIO, FORMATO, FILTRO, intervaloPreco);
+		gdr = new GeradorDeRelatorios(produtos, ALGORITMO, CRITERIO, FORMATO, FILTRO, intervaloPreco);
 		
 		try{
 			gdr.geraRelatorio("saida.html");

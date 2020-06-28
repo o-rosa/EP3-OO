@@ -1,5 +1,5 @@
 
-public class AlgInsertionSort implements Algoritimo {
+public class AlgInsertionSort implements Algoritmo {
 
 	@Override
 	public void ordena(int ini, int fim, Criterio criterio, Produto [] produtos) {

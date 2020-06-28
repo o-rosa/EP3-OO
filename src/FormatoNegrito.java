@@ -1,6 +1,6 @@
 import java.io.PrintWriter;
 
-public class FormatoNegrito extends FormatoDecorador {
+public class FormatoNegrito extends FormatoDecorator {
 
 	public FormatoNegrito(Formato f) {
 		super(f);
