@@ -1,64 +1,43 @@
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Principal {
-	public static final AlgInsertionSort ALG_INSERTIONSORT = new AlgInsertionSort();
-	//public static final AlgQuickSort ALG_QUICKSORT = new AlgQuickSort();
+	
+	/**
+	 * 
+	 * Mude as classes para fazer as alteracoes necessarias :)
+	 * 		(cuidado com o argumento do FILTRO)
+	 * 
+	 */
+	
+	public static final Algoritimo ALGORITIMO = new AlgInsertionSort();
+	public static final Criterio CRITERIO = new CritDescCresc();
+	public static final Formato FORMATO  = new FormatoNegrito(new FormatoCor("#7e53c6", new FormatoItalico(new  FormatoTexto())));
+	public static final Filtro FILTRO = new FiltroIntervaloPreco();
 
-	public static final CritDescCresc CRIT_DESC_CRESC = new CritDescCresc();
-	//public static final CritPrecoCresc CRIT_PRECO_CRESC = new CritPrecoCresc();
-	//public static final CritEstoqueCresc CRIT_ESTOQUE_CRESC = new CritEstoqueCresc();
-	
-	//public static final int FILTRO_TODOS = 0;
-	public static final FiltroEstoqueMenorOuIgualA FILTRO_ESTOQUE_MENOR_OU_IQUAL_A = new FiltroEstoqueMenorOuIgualA();
-	//public static final int FILTRO_CATEGORIA_IGUAL_A = 2;
-
-	// operador bit a bit "ou" pode ser usado para combinar mais de  
-	// um estilo de formatacao simultaneamente (veja exemplo no main)
-	
-	//public static final int FORMATO_PADRAO  = 0b0000;
-	//public static final int FORMATO_NEGRITO = 0b0001;
-	//public static final int FORMATO_ITALICO = 0b0010;
-	
 	
 	public static void main(String[] args) {
 		Produto [] produtos = carregaProdutos();
-
 		GeradorDeRelatorios gdr;
-
-		gdr = new GeradorDeRelatorios(	produtos, ALG_INSERTIONSORT, CRIT_DESC_CRESC, 
-						FORMATO_PADRAO | FORMATO_NEGRITO |  FORMATO_ITALICO, 
-						//FILTRO_ESTOQUE_MENOR_OU_IQUAL_A, 100);
-						FILTRO_ESTOQUE_MENOR_OU_IQUAL_A, 2);
+		
+		//Para FILTRO intervalo de preco
+		List<Double> intervaloPreco = new ArrayList<>(2);
+		intervaloPreco.add(100.0);//minimo
+		intervaloPreco.add(500.0);//maximo
+		
+		gdr = new GeradorDeRelatorios(produtos, ALGORITIMO, CRITERIO, FORMATO, FILTRO, intervaloPreco);
 		
 		try{
 			gdr.geraRelatorio("saida.html");
 		}
 		catch(IOException e){
-			
 			e.printStackTrace();
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		
 	}
-	
-	
-	
-	
-	
-	
-
-	
 	
 	
 	public static Produto [] carregaProdutos(){
