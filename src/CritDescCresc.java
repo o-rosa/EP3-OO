@@ -13,7 +13,7 @@ public class CritDescCresc implements Criterio {
 
 	@Override
 	public boolean crescente() {
-		return true;
+		return false;
 	}
 
 }
